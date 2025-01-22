@@ -79,7 +79,7 @@ export default class Server implements Party.Server {
     this.room.broadcast(JSON.stringify(this.state));
   }
 
-  onMessage(message: string, sender: Party.Connection) {
+  onMessage(message: string, _sender: Party.Connection) {
     const msg = JSON.parse(message) as Message;
 
     switch (msg.type) {
